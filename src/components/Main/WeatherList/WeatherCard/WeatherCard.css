@@ -1,0 +1,20 @@
+div.weatherCard {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    
+    border-radius: 5%;
+    background-color: rgb(97, 99, 101);
+
+    padding: 2%;
+    margin: 5%;
+
+    -webkit-box-shadow: 10px 10px 5px -4px rgba(110, 110, 110, 1);
+    -moz-box-shadow: 10px 10px 5px -4px rgba(110, 110, 110, 1);
+    box-shadow: 10px 10px 5px -4px rgba(110, 110, 110, 1);
+}
+
+h2,h3,h1 {
+    margin: 1%;
+}

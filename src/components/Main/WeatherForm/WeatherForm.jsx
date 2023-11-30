@@ -4,7 +4,7 @@ const WeatherForm = ({handleSubmit}) => {
 
   return (
     <>
-      <h1>Busca Ciudad</h1>
+      <h2>Busca Ciudad</h2>
       <br/>
       <form onSubmit={handleSubmit}>
         <label htmlFor='city'>Nombre de la Ciudad :  </label>

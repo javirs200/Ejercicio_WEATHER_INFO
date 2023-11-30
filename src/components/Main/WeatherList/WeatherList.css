@@ -1,0 +1,4 @@
+div.weatherList{
+    display: flex;
+    flex-wrap: wrap;
+}
