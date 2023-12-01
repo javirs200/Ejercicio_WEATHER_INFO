@@ -27,6 +27,7 @@ const WeatherList = ({ city }) => {
           const resp2 = await fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${api_key}&cnt=10&units=metric&lang=es`);
           const data2 = await resp2.json();
 
+          console.log(data2.list);
           setWeather(data2.list)
 
         }
@@ -42,7 +43,7 @@ const WeatherList = ({ city }) => {
   useEffect(() => { getWeather() }, ['city'])
 
   const drawList = () => {
-    return Weather.map((day, i) => <WeatherCard key={uuidv4()} weather={day.weather[0].description} date={day.dt_txt} />)
+    return Weather.map((day, i) => <WeatherCard key={uuidv4()} weather={day.weather[0].description} date={day.dt_txt} icon={day.weather[0].icon} />)
   }
 
   return <div className="weatherList">{drawList()}</div>;

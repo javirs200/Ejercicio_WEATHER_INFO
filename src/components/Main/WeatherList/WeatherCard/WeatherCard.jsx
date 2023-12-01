@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import './WeatherCard.css'
 
-const WeatherCard = ({ weather , date }) => {
+const WeatherCard = ({ weather , date ,icon }) => {
 
   
   let [dia,hora] = date.split(' ')
@@ -12,6 +12,7 @@ const WeatherCard = ({ weather , date }) => {
   return (
     <div className="weatherCard">
       <h2>{dia}</h2>
+      <img src={`http://openweathermap.org/img/wn/${icon}.png`}/>
       <h3>{weather}</h3>
       <h3>{hora}</h3>
     </div>
