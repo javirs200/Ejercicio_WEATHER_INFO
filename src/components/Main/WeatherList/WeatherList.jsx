@@ -15,7 +15,7 @@ const WeatherList = ({ city }) => {
     try {
       const api_key = import.meta.env.VITE_API_KEY
       //get coordinates from the city
-      const resp = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${api_key}`);
+      const resp = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${api_key}`);
       const data = await resp.json();
       if (data) {
         //console.log(data);
@@ -24,7 +24,7 @@ const WeatherList = ({ city }) => {
           const lon = data[0].lon
           //console.log('nombre:' ,data[0].name,' latitud:',data[0].lat,' logitud',data[0].lon);
           //&cnt=1
-          const resp2 = await fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${api_key}&cnt=10&units=metric&lang=es`);
+          const resp2 = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${api_key}&cnt=10&units=metric&lang=es`);
           const data2 = await resp2.json();
 
           console.log(data2.list);
