@@ -8,7 +8,6 @@ const WeatherCard = ({ weather , date ,icon }) => {
   hora = hora.slice(0,hora.length-3)
   //console.log('dia->',dia,' hora->',hora);
   
-
   return (
     <div className="weatherCard">
       <h2>{dia}</h2>
